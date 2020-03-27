@@ -242,45 +242,45 @@
                     <div class="checkout-info__field-group checkout-info__field-group--2-fields">
 
                       <div class="checkout-info__field">
-                        <label>First name</label>
-                        <input name="first-name" type="text">
+                        <input id="first-name" name="first-name" type="text">
+                        <label for="first-name">First name</label>
                       </div>
 
                       <div class="checkout-info__field">
-                        <label>Last name</label>
-                        <input name="last-name" type="text">
+                        <input id="last-name" name="last-name" type="text">
+                        <label for="last-name">Last name</label>
                       </div>
 
                     </div>
 
                     <div class="checkout-info__field-group">
                       <div class="checkout-info__field">
-                        <label>Email</label>
-                        <input name="email" type="email">
+                        <input id="email" name="email" type="email">
+                        <label for="email">Email</label>
                       </div>
                     </div>
 
                     <div class="checkout-info__field-group checkout-info__field-group--2-fields">
 
                       <div class="checkout-info__field">
-                        <label>Country</label>
-                        <select name="country">
+                        <select id="country" name="country">
                           <option value="us">United States</option>
                           <option value="ca">Canada</option>
                         </select>
+                        <label for="country">Country</label>
                       </div>
 
                       <div class="checkout-info__field">
-                        <label>Postal code</label>
-                        <input name="zip" type="text">
+                        <input id="zip" name="zip" type="text">
+                        <label for="zip">Postal code</label>
                       </div>
 
                     </div>
 
                     <div class="checkout-info__field-group">
                       <div class="checkout-info__field">
-                        <label>Phone number</label>
-                        <input name="phone" type="text">
+                        <input id="phone" name="phone" type="text">
+                        <label for="phone">Phone number</label>
                       </div>
                     </div>
                   </div>
@@ -289,24 +289,25 @@
                   <h2>Payments details</h2>
 
                   <div class="checkout-info__fieldset">
-                    <div class="checkout-info__field-group checkout-info__field-group--2-fields">
+                    <div class="checkout-info__field-group">
 
                       <div class="checkout-info__field">
-                        <label>Credit Card Number</label>
-                        <input name="card" type="text">
-                      </div>
-
-                      <div class="checkout-info__field">
-                        <label>Security Code</label>
-                        <input name="cvv" type="password">
+                        <input id="card" name="card" type="text">
+                        <label for="card">Credit Card Number</label>
                       </div>
 
                     </div>
 
-                    <div class="checkout-info__field-group">
+                    <div class="checkout-info__field-group checkout-info__field-group--2-fields">
+
                       <div class="checkout-info__field">
-                        <label>Expiration Date</label>
-                        <input name="exp-date" type="text">
+                        <input id="cvv" name="cvv" type="password">
+                        <label for="cvv">Security Code</label>
+                      </div>
+
+                      <div class="checkout-info__field">
+                        <input id="exp-date" name="exp-date" type="text">
+                        <label for="exp-date">Expiration Date</label>
                       </div>
                     </div>
 
@@ -319,33 +320,34 @@
             </div>
             <div class="mdl-cell mdl-cell--4-col">
               <div class="checkout-summary">
-                <h2>your order</h2>
+                <div class="checkout-summary__inner">
+                  <h2>your order</h2>
 
-                <table class="checkout-summary_table">
-                  <tbody>
-                    <tr class="checkout-summary__item">
-                      <td class="checkout-summary__name">Apple Watch Sport</td>
-                      <td class="checkout-summary__price">$ 580</td>
-                    </tr>
-                    <tr class="checkout-summary__item">
-                      <td class="checkout-summary__name">Modern Buckle</td>
-                      <td class="checkout-summary__price">$ 280</td>
-                    </tr>
-                    <tr class="checkout-summary__item checkout-summary__item--divider">
-                      <td class="checkout-summary__name">Total purchases</td>
-                      <td class="checkout-summary__price">$ 960.00</td>
-                    </tr>
-                    <tr class="checkout-summary__item">
-                      <td class="checkout-summary__name">Estimated Tax</td>
-                      <td class="checkout-summary__price">$ 0</td>
-                    </tr>
-                    <tr class="checkout-summary__item checkout-summary__item--grand-total">
-                      <td class="checkout-summary__name">Total</td>
-                      <td class="checkout-summary__price">$ 960</td>
-                    </tr>
-                  </tbody>
-                </table>
-
+                  <table class="checkout-summary__table">
+                    <tbody>
+                      <tr class="checkout-summary__item">
+                        <td class="checkout-summary__name">Apple Watch Sport</td>
+                        <td class="checkout-summary__price">$ 580</td>
+                      </tr>
+                      <tr class="checkout-summary__item">
+                        <td class="checkout-summary__name">Modern Buckle</td>
+                        <td class="checkout-summary__price">$ 280</td>
+                      </tr>
+                      <tr class="checkout-summary__item">
+                        <td class="checkout-summary__name divider">Total purchases</td>
+                        <td class="checkout-summary__price divider">$ 960.00</td>
+                      </tr>
+                      <tr class="checkout-summary__item">
+                        <td class="checkout-summary__name">Estimated Tax</td>
+                        <td class="checkout-summary__price">$ 0</td>
+                      </tr>
+                      <tr class="checkout-summary__item checkout-summary__item--grand-total">
+                        <td class="checkout-summary__name divider">Total</td>
+                        <td class="checkout-summary__price divider">$ 960</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </section>

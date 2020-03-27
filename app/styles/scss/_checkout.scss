@@ -1,20 +1,19 @@
 #checkout{
   background-color:$bg-color!important;
-
-  h2{
-    margin: 0 0 5px;
-    color: $color-black;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
 }
 
 .checkout-info {
+  margin: 0 5px 0 0;
   counter-reset: section;
   list-style-type: none;
 
   h2{
+    margin: 0 0 5px;
+    color: $color-black;
+    line-height: 45px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
     position: relative;
 
     &:before{
@@ -44,10 +43,10 @@
 
   &__field{
     display: flex;
-    flex-flow: column;
+    flex-flow: column-reverse;
     width: 100%;
     margin: 0 7px;
-    padding: 10px;
+    padding: 7px 10px;
     background-color: $color-white;
     border-radius: 4px;
     box-shadow: $box-shadow-1;
@@ -56,17 +55,91 @@
       color: $text-color;
       font-size: 12px;
       font-weight: bold;
+      line-height: 1.5;
+    }
+
+    input{
+      border: none;
+      font-size: 16px;
+      color: $text-color-2;
+
+      &:focus{
+        outline: none;
+      }
+    }
+
+    select{
+      background-color: $color-white;
+      border: none;
+      font-size: 16px;
+
+      &:focus{
+        outline: none;
+      }
     }
   }
 }
 
 .checkout-summary{
+  margin-top: 50px;
   background-color: $color-white;
   border-radius: 4px;
-  padding: 15px;
+  padding: 5px;
   box-shadow: $box-shadow-1;
-
   color: $color-black;
   font-size: 12px;
+
+  &__inner{
+    border: 2px dotted $border-color;
+    border-radius: 4px;
+    padding: 10px 10px 30px;
+  }
+
+  h2{
+    margin: 0;
+    color: $color-black;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 30px;
+  }
+
+  &__table{
+    width: 100%;
+    border-spacing: 0;
+  }
+
+  &__item{
+
+    &--grand-total{
+      font-weight: bold;
+
+      .checkout-summary__price{
+        font-size: 22px;
+      }
+    }
+  }
+  &__name{
+    padding: 3px 0;
+  }
+
+  &__price{
+    text-align: right;
+  }
+
+  .divider{
+    position: relative;
+    padding-top: 20px;
+
+    &:before{
+      content: "";
+      display: block;
+      width: 100%;
+      padding-bottom: 10px;
+      border-top: 2px dotted $border-color;
+    }
+  }
+
+
 }
 
