@@ -51,6 +51,7 @@
   }
 
   &__field{
+    position: relative;
     display: flex;
     flex-flow: column-reverse;
     width: 100%;
@@ -109,6 +110,55 @@
     }
   }
 
+  &__visa-icon{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+
+  &__tooltip{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+
+    img{
+      opacity: 0.5;
+    }
+
+    &:hover{
+      .checkout-info__tooltip-content{
+        display: block;
+      }
+    }
+  }
+
+  &__tooltip-content{
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: calc( 100% + 10px);
+    transform: translate(-50%, 0);
+    min-width: 200px;
+    z-index: 1;
+    background-color: $color-black;
+    text-align: center;
+    color: $color-white;
+    border-radius: 4px;
+    padding: 5px;
+
+    &:after{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      border: 5px solid transparent;
+      border-top: 5px solid $color-black;
+      transform: translate(-50%, 0);
+    }
+  }
+
   &__cta-wrapper{
     padding: 0 7px;
     margin: 40px 0;
@@ -126,7 +176,7 @@
     border: none;
     box-shadow: $box-shadow-cta;
     cursor: pointer;
-    
+
     img{
       height: 18px;
       margin-right: 5px;

@@ -287,7 +287,7 @@
                     </div>
                   </li>
                   <li class="checkout-info__item">
-                    <h2>Payments details <img src="images/checkout/lock-24px.svg" alt="cart_icon"></h2>
+                    <h2>Payments details <img src="images/checkout/lock-24px.svg" alt="lock_icon"></h2>
 
                     <div class="checkout-info__fieldset">
                       <div class="checkout-info__field-group">
@@ -295,6 +295,7 @@
                         <div class="checkout-info__field">
                           <input id="card" name="card" type="text" required>
                           <label for="card">Credit Card Number</label>
+                          <img class="checkout-info__visa-icon" src="images/checkout/visa-icon.png" alt="visa_icon">
                         </div>
 
                       </div>
@@ -304,6 +305,11 @@
                         <div class="checkout-info__field">
                           <input id="cvv" name="cvv" type="password" required>
                           <label for="cvv">Security Code</label>
+
+                          <div class="checkout-info__tooltip">
+                            <img src="images/checkout/help_outline-black.svg" alt="help_icon">
+                            <div class="checkout-info__tooltip-content">Tooltip content</div>
+                          </div>
                         </div>
 
                         <div class="checkout-info__field">
