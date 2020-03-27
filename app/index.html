@@ -233,90 +233,93 @@
         <div class="mdl-layout__tab-panel is-active" id="checkout">
           <section class="section--center mdl-grid mdl-grid--no-spacing">
             <div class="mdl-cell mdl-cell--8-col">
-              <ul class="checkout-info">
-                <li class="checkout-info__item">
-                  <h2>Personal information</h2>
+              <form class="checkout-info">
+                <ul class="checkout-info__list">
+                  <li class="checkout-info__item">
+                    <h2>Personal information</h2>
 
-                  <div class="checkout-info__fieldset">
+                    <div class="checkout-info__fieldset">
 
-                    <div class="checkout-info__field-group checkout-info__field-group--2-fields">
+                      <div class="checkout-info__field-group checkout-info__field-group--2-fields">
 
-                      <div class="checkout-info__field">
-                        <input id="first-name" name="first-name" type="text">
-                        <label for="first-name">First name</label>
+                        <div class="checkout-info__field">
+                          <input id="first-name" name="first-name" type="text" required>
+                          <label for="first-name">First name</label>
+                        </div>
+
+                        <div class="checkout-info__field">
+                          <input id="last-name" name="last-name" type="text" required>
+                          <label for="last-name">Last name</label>
+                        </div>
+
                       </div>
 
-                      <div class="checkout-info__field">
-                        <input id="last-name" name="last-name" type="text">
-                        <label for="last-name">Last name</label>
+                      <div class="checkout-info__field-group">
+                        <div class="checkout-info__field">
+                          <input id="email" name="email" type="email" required>
+                          <label for="email">Email</label>
+                        </div>
+                      </div>
+
+                      <div class="checkout-info__field-group checkout-info__field-group--2-fields">
+
+                        <div class="checkout-info__field">
+                          <select id="country" name="country" required>
+                            <option value="us">United States</option>
+                            <option value="ca">Canada</option>
+                          </select>
+                          <label for="country">Country</label>
+                        </div>
+
+                        <div class="checkout-info__field">
+                          <input id="zip" name="zip" type="text" required>
+                          <label for="zip">Postal code</label>
+                        </div>
+
+                      </div>
+
+                      <div class="checkout-info__field-group">
+                        <div class="checkout-info__field">
+                          <input id="phone" name="phone" type="text" required>
+                          <label for="phone">Phone number</label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="checkout-info__item">
+                    <h2>Payments details <img src="images/checkout/lock-24px.svg" alt="cart_icon"></h2>
+
+                    <div class="checkout-info__fieldset">
+                      <div class="checkout-info__field-group">
+
+                        <div class="checkout-info__field">
+                          <input id="card" name="card" type="text" required>
+                          <label for="card">Credit Card Number</label>
+                        </div>
+
+                      </div>
+
+                      <div class="checkout-info__field-group checkout-info__field-group--2-fields">
+
+                        <div class="checkout-info__field">
+                          <input id="cvv" name="cvv" type="password" required>
+                          <label for="cvv">Security Code</label>
+                        </div>
+
+                        <div class="checkout-info__field">
+                          <input id="exp-date" name="exp-date" type="text" required>
+                          <label for="exp-date">Expiration Date</label>
+                        </div>
                       </div>
 
                     </div>
-
-                    <div class="checkout-info__field-group">
-                      <div class="checkout-info__field">
-                        <input id="email" name="email" type="email">
-                        <label for="email">Email</label>
-                      </div>
+                    <div class="checkout-info__cta-wrapper">
+                      <button type="submit" class="checkout-info__place-order"><img src="images/checkout/shopping_cart-24px.svg" alt="cart_icon">Complete Purchase</button>
                     </div>
 
-                    <div class="checkout-info__field-group checkout-info__field-group--2-fields">
-
-                      <div class="checkout-info__field">
-                        <select id="country" name="country">
-                          <option value="us">United States</option>
-                          <option value="ca">Canada</option>
-                        </select>
-                        <label for="country">Country</label>
-                      </div>
-
-                      <div class="checkout-info__field">
-                        <input id="zip" name="zip" type="text">
-                        <label for="zip">Postal code</label>
-                      </div>
-
-                    </div>
-
-                    <div class="checkout-info__field-group">
-                      <div class="checkout-info__field">
-                        <input id="phone" name="phone" type="text">
-                        <label for="phone">Phone number</label>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="checkout-info__item">
-                  <h2>Payments details</h2>
-
-                  <div class="checkout-info__fieldset">
-                    <div class="checkout-info__field-group">
-
-                      <div class="checkout-info__field">
-                        <input id="card" name="card" type="text">
-                        <label for="card">Credit Card Number</label>
-                      </div>
-
-                    </div>
-
-                    <div class="checkout-info__field-group checkout-info__field-group--2-fields">
-
-                      <div class="checkout-info__field">
-                        <input id="cvv" name="cvv" type="password">
-                        <label for="cvv">Security Code</label>
-                      </div>
-
-                      <div class="checkout-info__field">
-                        <input id="exp-date" name="exp-date" type="text">
-                        <label for="exp-date">Expiration Date</label>
-                      </div>
-                    </div>
-
-                  </div>
-
-                  <button class="checkout-info_place-order">Complete Purchase</button>
-
-                </li>
-              </ul>
+                  </li>
+                </ul>
+              </form>
             </div>
             <div class="mdl-cell mdl-cell--4-col">
               <div class="checkout-summary">
